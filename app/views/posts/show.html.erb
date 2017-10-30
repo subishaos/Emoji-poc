@@ -1,6 +1,6 @@
 <h1><%= @post.title %></h1>
 
-<%=@post.body%>
+<%=Gemojione.replace_unicode_moji_with_images(@post.body).html_safe%>
 
 <a href="/posts/<%= @post.id %>/edit">Edit</a>
 
